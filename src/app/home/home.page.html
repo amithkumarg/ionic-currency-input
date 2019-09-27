@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Currency Input
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <app-number-input [precision]="precision" [amount]="''" (amountEntered)="amountChanged($event)">
+  </app-number-input>
+  <ion-text>User entered {{amount}} with precision {{precision}}</ion-text>
+</ion-content>
