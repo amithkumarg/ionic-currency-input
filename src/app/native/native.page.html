@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary" class="ion-text-center">
-    <ion-back-button></ion-back-button>
+    <ion-back-button slot="start"></ion-back-button>
     <ion-title>
       Ionic Currency Input
     </ion-title>
@@ -12,20 +12,14 @@
     <ion-list lines="none" class="ion-no-margin ion-no-padding">
         <ion-item>
             <ion-label position="stacked">Enter Amount</ion-label>
-            <app-number-input [precision]="precision" [amount]="''" (amountEntered)="amountChanged($event)"></app-number-input> 
+            <ion-input placeholder="$0.00" inputmode="decimal" [(ngModel)]="entry" name="amount"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-text color="tertiary">User entered {{amount}} with precision {{precision}}</ion-text>
+            <ion-text color="tertiary">User entered {{ entry }}</ion-text>
         </ion-item>
     </ion-list>
     <ion-toolbar>
-      <ion-button color="danger" type="submit" [disabled]="!form.valid || !amount">Done</ion-button>
+      <ion-button color="danger" type="submit" [disabled]="!form.valid || !entry">Done</ion-button>
     </ion-toolbar>
   </form>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-button color="medium" slot="end" [routerLink]="'/native'">Native</ion-button>
-  </ion-toolbar>
-</ion-footer>

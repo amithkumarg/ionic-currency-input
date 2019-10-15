@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { HomePage } from './home.page';
-import { NumberInputComponent } from '@components/number-input/number-input.component';
+import { NativePage } from './native.page';
 
 @NgModule({
   imports: [
@@ -14,10 +13,10 @@ import { NumberInputComponent } from '@components/number-input/number-input.comp
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage
+        component: NativePage
       }
     ])
   ],
-  declarations: [HomePage, NumberInputComponent]
+  declarations: [NativePage]
 })
-export class HomePageModule {}
+export class NativePageModule {}

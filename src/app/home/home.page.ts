@@ -10,6 +10,8 @@ export class HomePage {
   amount = 0;
 
   precision = 2;
+
+  entry;
   constructor() {}
 
   amountChanged(event: number) {
